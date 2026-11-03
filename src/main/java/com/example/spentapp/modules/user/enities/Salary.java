@@ -17,4 +17,8 @@ public class Salary {
 
     @Column(nullable = false)
     private String currency;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }

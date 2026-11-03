@@ -1,5 +1,6 @@
 package com.example.spentapp.modules.product.entities;
 
+import com.example.spentapp.modules.user.enities.User;
 import jakarta.persistence.*;
 
 @Entity
@@ -19,6 +20,12 @@ public class Transactions {
     @Column(nullable = false, precision = 10)
     private double totalAmount;
 
-//    @Column(nullable = false)
-//    private String currency;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
+
 }

@@ -2,6 +2,8 @@ package com.example.spentapp.modules.user.enities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "permissions")
 public class Permission {
@@ -14,4 +16,7 @@ public class Permission {
 
     @Column(nullable = false, length = 255)
     private String description;
+
+    @ManyToMany(mappedBy = "permissions")
+    private List<Role> roles;
 }

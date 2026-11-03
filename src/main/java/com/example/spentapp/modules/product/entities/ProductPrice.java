@@ -1,5 +1,6 @@
 package com.example.spentapp.modules.product.entities;
 
+import com.example.spentapp.modules.user.enities.User;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,4 +18,8 @@ public class ProductPrice {
 
     @Column(nullable = false)
     private String expirationDate;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
 }

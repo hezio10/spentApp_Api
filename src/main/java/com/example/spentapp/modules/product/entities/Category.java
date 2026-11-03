@@ -1,6 +1,9 @@
 package com.example.spentapp.modules.product.entities;
 
+import com.example.spentapp.modules.user.enities.User;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "categories")
@@ -14,4 +17,11 @@ public class Category {
 
     @Column(nullable = true, length = 255)
     private String description;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @OneToMany(mappedBy = "product")
+    private List<Product> products;
 }

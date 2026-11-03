@@ -2,6 +2,8 @@ package com.example.spentapp.modules.user.enities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "roles")
 public class Role {
@@ -15,6 +17,9 @@ public class Role {
     @Column(nullable = false, length = 255)
     private String description;
 
-    @OneToOne(mappedBy = "role")
-    private User user;
+    @ManyToMany
+    @JoinTable(name = "role_permissions",
+            joinColumns = @JoinColumn(name = "role_id"),
+            inverseJoinColumns = @JoinColumn(name = "permission_id"))
+    private List<Permission> permissions;
 }
