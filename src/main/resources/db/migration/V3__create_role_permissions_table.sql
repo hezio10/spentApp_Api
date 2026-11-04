@@ -1,0 +1,4 @@
+CREATE TABLE role_permissions (
+   role_id INT NOT NULL REFERENCES roles(id) ON DELETE CASCADE,
+   permission_id INT NOT NULL REFERENCES permissions(id) ON DELETE CASCADE
+);

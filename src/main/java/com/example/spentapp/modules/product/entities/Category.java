@@ -22,6 +22,6 @@ public class Category {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "category")
     private List<Product> products;
 }

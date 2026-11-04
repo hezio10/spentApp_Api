@@ -2,8 +2,8 @@ package com.example.spentapp.modules.user.enities;
 
 import com.example.spentapp.modules.product.entities.Category;
 import com.example.spentapp.modules.product.entities.Product;
+import com.example.spentapp.modules.product.entities.Transaction;
 import jakarta.persistence.*;
-import jakarta.transaction.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;

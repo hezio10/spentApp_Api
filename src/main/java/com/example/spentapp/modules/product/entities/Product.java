@@ -2,7 +2,6 @@ package com.example.spentapp.modules.product.entities;
 
 import com.example.spentapp.modules.user.enities.User;
 import jakarta.persistence.*;
-import jakarta.transaction.Transaction;
 
 import java.util.List;
 

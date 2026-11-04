@@ -1,0 +1,6 @@
+CREATE TABLE users (
+    id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role_id INT NOT NULL REFERENCES roles(id) ON DELETE CASCADE
+);
