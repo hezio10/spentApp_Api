@@ -2,7 +2,9 @@ package com.example.spentapp.modules.product.entities;
 
 import com.example.spentapp.modules.user.enities.User;
 import jakarta.persistence.*;
+import lombok.Getter;
 
+@Getter
 @Entity
 @Table(name = "transactions")
 public class Transaction {

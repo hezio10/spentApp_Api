@@ -4,10 +4,12 @@ import com.example.spentapp.modules.product.entities.Category;
 import com.example.spentapp.modules.product.entities.Product;
 import com.example.spentapp.modules.product.entities.Transaction;
 import jakarta.persistence.*;
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
 @Entity
 @Table(name = "users")
 public class User {
@@ -23,7 +25,7 @@ public class User {
 
     @OneToOne
     @JoinColumn(name = "role_id")
-    private Role Role;
+    private Role role;
 
     @OneToMany(mappedBy = "user")
     private List<Salary> salaries;

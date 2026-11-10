@@ -2,9 +2,11 @@ package com.example.spentapp.modules.product.entities;
 
 import com.example.spentapp.modules.user.enities.User;
 import jakarta.persistence.*;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 @Entity
 @Table(name = "products")
 public class Product {
@@ -13,7 +15,7 @@ public class Product {
     private Integer id;
 
     @Column(nullable = false, length = 255)
-    private String productName;
+    private String name;
 
     @Column(nullable = true, length = 255)
     private String description;

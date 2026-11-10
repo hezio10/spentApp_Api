@@ -1,7 +1,9 @@
 package com.example.spentapp.modules.user.enities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
+@Getter
 @Entity
 @Table(name = "salaries")
 public class Salary {

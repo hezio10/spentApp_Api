@@ -1,9 +1,11 @@
 package com.example.spentapp.modules.user.enities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 @Entity
 @Table(name = "roles")
 public class Role {
