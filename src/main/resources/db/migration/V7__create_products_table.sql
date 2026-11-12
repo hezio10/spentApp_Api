@@ -1,5 +1,5 @@
 CREATE TABLE products (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description VARCHAR(255),
     user_id INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,

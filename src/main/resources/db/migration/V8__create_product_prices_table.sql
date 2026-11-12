@@ -1,5 +1,5 @@
 CREATE TABLE product_prices (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     price DOUBLE NOT NULL,
     expiration_date DATE NOT NULL,
     isActive INT NOT NULL,

@@ -1,5 +1,5 @@
 CREATE TABLE transactions (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     unit_price DOUBLE NOT NULL,
     date VARCHAR(255) NOT NULL,
     quantity INT NOT NULL,
