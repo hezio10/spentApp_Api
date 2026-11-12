@@ -1,9 +1,12 @@
 package com.example.spentapp.modules.user.enities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 @Entity
 @Table(name = "salaries")
 public class Salary {
@@ -20,6 +23,7 @@ public class Salary {
     @Column(nullable = false)
     private String currency;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

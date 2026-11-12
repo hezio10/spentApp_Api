@@ -25,14 +25,13 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public  Optional<User> getUser(Long id) {
+    public  Optional<User> getUser(Integer id) {
         return userRepository.findById(id);
     }
 
     public  User register(UserRequest request) {
 
-        Role role = roleRepository.findById(request.role_id())
-                .orElseThrow(() -> new RuntimeException("Role não encontrada: " + request.role_id()));
+        Role role = roleRepository.findById(request.role_id()).orElseThrow(() -> new RuntimeException("Role não encontrada: " + request.role_id()));
 
         User user = new User();
         user.setName(request.name());
